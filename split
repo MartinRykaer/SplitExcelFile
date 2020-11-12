@@ -1,0 +1,13 @@
+nfile = open('file.txt', 'r')
+outfile = open('outfilename.txt','w')
+i=0
+for line in infile:
+    i+=1
+    outfile.write(line)
+    if i % 1000000 == 0:
+        print(i)
+        outfile.close()
+        outfile = open('P:/Novo presentation/forMartin/txt/allpsplit/out'+str(i)+'.txt','w')   
+print(i)
+outfile.close()
+infile.close()
